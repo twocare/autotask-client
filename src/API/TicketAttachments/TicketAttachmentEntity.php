@@ -19,7 +19,7 @@ class TicketAttachmentEntity extends DataTransferObject
     public ?int $creatorType;
     public $data;
     public $fileSize;
-    public string $fullPath;
+    public ?string $fullPath;
     public $id;
     public ?int $impersonatorCreatorResourceID;
     public $opportunityID;
