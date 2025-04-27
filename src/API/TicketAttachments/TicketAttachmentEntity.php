@@ -14,12 +14,12 @@ class TicketAttachmentEntity extends DataTransferObject
     public ?Carbon $attachDate;
     public $attachedByContactID;
     public $attachedByResourceID;
-    public ?string $attachmentType;
+    public string $attachmentType;
     public ?string $contentType;
     public ?int $creatorType;
     public $data;
     public $fileSize;
-    public ?string $fullPath;
+    public string $fullPath;
     public $id;
     public ?int $impersonatorCreatorResourceID;
     public $opportunityID;
@@ -63,6 +63,6 @@ class TicketAttachmentEntity extends DataTransferObject
             throw new \Exception('Missing items key in response.');
         }
 
-        return new self($responseArray['items']);
+        return new self($responseArray['items'][0]);
     }
 }
