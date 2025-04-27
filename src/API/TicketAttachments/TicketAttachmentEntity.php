@@ -59,10 +59,10 @@ class TicketAttachmentEntity extends DataTransferObject
     {
         $responseArray = json_decode($response->getBody(), true);
 
-        if (isset($responseArray['item']) === false) {
-            throw new \Exception('Missing item key in response.');
+        if (isset($responseArray['items']) === false) {
+            throw new \Exception('Missing items key in response.');
         }
 
-        return new self($responseArray['item']);
+        return new self($responseArray['items']);
     }
 }
