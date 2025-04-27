@@ -14,7 +14,7 @@ class TicketAttachmentEntity extends DataTransferObject
     public ?Carbon $attachDate;
     public $attachedByContactID;
     public $attachedByResourceID;
-    public string $attachmentType;
+    public ?string $attachmentType;
     public ?string $contentType;
     public ?int $creatorType;
     public $data;
